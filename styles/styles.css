@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'SF Regular';
+    src: url('../assets/fonts/SFREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Thin';
+    src: url('../assets/fonts/SFTHIN.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Light';
+    src: url('../assets/fonts/SFLIGHT.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UltraLight';
+    src: url('../assets/fonts/SFULTRALIGHT.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+.presentation {
+    text-align: left;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+* {
+    font-family: 'SF Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Clases de fuentes personalizadas que sobrescriben la fuente por defecto */
+.sf-thin {
+    font-family: 'SF Thin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 100;
+}
+
+.sf-light {
+    font-family: 'SF Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 300;
+}
+
+.sf-ultralight {
+    font-family: 'SF UltraLight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 200;
+}

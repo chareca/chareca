@@ -1,18 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Chareca</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container-lg">
-        <h1>
-            Nicolas Chareca
-            <small class="text-body-secondary">Computer Science student</small>
-        </h1>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-</body>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicolas Chareca</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-3" id="start">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#start">Nicolas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 justify-space-between">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#studies">Studies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-lg">
+            <div class="presentation">
+                <div class="name">
+                    <h1>
+                        Nicolas Chareca
+                        <small class="text-body-secondary fs-4 sf-light">Computer Science student</small>
+                    </h1>
+                </div>
+                <div class="my-4 fs-5">
+                    <p class="mb-0 sf-light">Hello, I'm Nicolas Chareca, a Computer Science student at Public University of Navarre, Spain.</p>
+                    <p class="mb-0 sf-light">This is a kind of organized summary about my background and achievements, but also including current interests and passions.</p>
+                    <p class="mb-0 sf-light">I'm passionate about technology and always eager to learn more.</p>
+                    <p class="mb-0 sf-light">So either if you are here to collaborate or just to connect, feel free to reach out!</p>
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn btn-outline-light">Download CV</a>
+                    <a href="#contact" class="btn btn-outline-success">Contact me</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark-subtle">
+            <div class="container-lg">
+                <h2 class="py-4">Experience</h2>
+                <div class="container text-center">
+                    <div class="row justify-content-md-center">
+                        <a href="https://nubax.com.ar" target="_blank" class="col-md-auto border rounded p-3 text-decoration-none text-light" data-bs-toggle="tooltip" data-bs-title="Formerly DataCloud" title="Formerly DataCloud">
+                            <img src="assets/images/nubax.png" class="img-fluid rounded-circle mb-3" alt="Nubax Logo" width="150" height="150">
+                            <h3>Nubax</h3>
+                            <div class="description my-2">
+                                <p class="sf-light fs-5 my-0 ">Junior Tech & Innovation Technician</p>
+                                <p class="sf-light my-0">2021-2023</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

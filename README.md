@@ -2,14 +2,14 @@
 
 Hello, I'm Nicolás
 
-Currently I'm a 3rd year Computer Science / Ingeniería Informática student at Public University of Navarre (PUN).
+Currently I'm a 3rd year Computer Science / Ingeniería Informática student at Public University of Navarre (UPNA).
 
 ---
 
 ### About me
 
-- **Education:** CS student at PUN (2023-2027) with honours obtained in multiple subjects.
-- **Research:** Collaborating in a PUN project working with **Federated Learning** and **Hypercycle**.
+- **Education:** CS student at UPNA (2023-2027) with honours obtained in multiple subjects.
+- **Research:** Collaborating in a UPNA project working with **Federated Learning** and **Hypercycle**.
 - **Experience:** 2 years as Junior Tech & Innovation Technician in Nubax (formerly DataCloud), developing streaming platforms and cybersecurity statistic apps.
 - **Languages:** Spanish (Native) and English (C1 - Cambridge CAE).
 
@@ -43,8 +43,8 @@ Currently I'm a 3rd year Computer Science / Ingeniería Informática student at 
 
 | Project | Focus | Institution |
 | :--- | :--- | :--- |
-| **Federated Learning** | Decentralized AI model training | PUN |
-| **Hypercycle** | TODA/IP protocol, descentralized IoAI | PUN |
+| **Federated Learning** | Decentralized AI model training | UPNA |
+| **Hypercycle** | TODA/IP protocol, descentralized IoAI | UPNA |
 
 ---
 

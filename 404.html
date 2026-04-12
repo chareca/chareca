@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404 | Nicolás Chareca</title>
+
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2228%22 fill=%22%23000%22/><path d=%22M55 20 L35 55 H48 L40 80 L65 45 H52 L60 20 Z%22 fill=%22%230d6efd%22/></svg>">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="styles/styles.css" rel="stylesheet">
+
+        <style>
+            .error-wrapper {
+                position: relative;
+                min-height: 100vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                background: var(--bg-dark);
+            }
+
+            .error-code {
+                font-size: clamp(6rem, 20vw, 14rem);
+                line-height: 1;
+                background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, 0.15) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+                font-weight: 800;
+                letter-spacing: -0.05em;
+                margin-bottom: 1rem;
+            }
+
+            .error-panel {
+                text-align: center;
+                max-width: 520px;
+                padding: 3.5rem;
+            }
+
+            .error-subtitle {
+                color: var(--text-muted);
+                font-size: 1.15rem;
+                line-height: 1.6;
+                margin-bottom: 2.5rem;
+            }
+
+            .error-icon {
+                font-size: 1.5rem;
+                color: #0d6efd;
+                margin-bottom: 1.5rem;
+                filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.4));
+            }
+
+            @media (max-width: 576px) {
+                .error-panel {
+                    padding: 2rem 1.5rem;
+                    margin: 0 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom px-4 py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="/">NC.</a>
+            </div>
+        </nav>
+
+        <section class="error-wrapper">
+            <div class="hero-aurora" style="pointer-events: none;"></div>
+            <div class="grid-overlay"></div>
+
+            <div class="error-panel glass-panel" style="height: auto; position: relative; z-index: 10;">
+                <div class="error-icon">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <h1 class="error-code">404</h1>
+                <p class="error-subtitle">
+                    This page doesn't exist or has been moved.
+                </p>
+                <a href="/" class="btn btn-light btn-bento">Go Home</a>
+            </div>
+        </section>
+    </body>
+</html>

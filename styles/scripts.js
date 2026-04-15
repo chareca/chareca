@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // Smooth scrolling
+    // Smooth scrolling + auto-close mobile navbar
+    const navCollapseEl = document.getElementById('navbarNav');
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -51,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: target.offsetTop - 80,
                     behavior: 'smooth'
                 });
+            }
+            if (navCollapseEl && navCollapseEl.classList.contains('show')) {
+                bootstrap.Collapse.getOrCreateInstance(navCollapseEl).hide();
             }
         });
     });

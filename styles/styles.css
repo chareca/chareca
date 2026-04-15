@@ -358,6 +358,12 @@ html {
     100% { transform: translateX(-50%); }
 }
 
+@media (min-width: 769px) and (max-width: 991.98px) {
+    .hero-wrapper {
+        padding-top: 130px;
+    }
+}
+
 @media (max-width: 768px) {
     .scroll-indicator {
         display: none !important;
@@ -367,7 +373,7 @@ html {
         justify-content: flex-start;
         height: auto;
         min-height: 100vh;
-        padding-top: 100px;
+        padding-top: 150px;
         overflow-x: hidden;
     }
     .hero-content {
@@ -475,10 +481,49 @@ html {
 
 /* Navigation */
 .navbar-custom {
-    background: rgba(0, 0, 0, 0.4) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
     border-bottom: 0.5px solid var(--glass-border);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-custom {
+        background: transparent !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: none;
+        padding: 0.85rem 1rem !important;
+    }
+
+    /* The pill container — grows naturally to wrap the menu inside */
+    .navbar-custom > .container-fluid {
+        position: relative;
+        background: linear-gradient(180deg,
+            rgba(8, 18, 42, 0.94) 0%,
+            rgba(3, 9, 24, 0.96) 100%);
+        backdrop-filter: blur(30px) saturate(180%);
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+        border: 1px solid rgba(80, 130, 210, 0.22);
+        border-radius: 28px;
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+        box-shadow:
+            inset 0 1px 0 rgba(120, 160, 230, 0.14),
+            0 10px 30px rgba(0, 10, 35, 0.5);
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+
+    /* Brand inside the pill — no separate glass anymore */
+    .navbar-custom .navbar-brand {
+        background: transparent !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0 !important;
+        border: none !important;
+        color: #fff;
+        margin: 0;
+    }
 }
 
 .nav-link {
@@ -489,6 +534,126 @@ html {
 
 .nav-link:hover {
     color: #fff !important;
+}
+
+/* Hamburger — soft circular button inside the pill */
+.hamburger-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: rgba(80, 130, 210, 0.12) !important;
+    border: 1px solid rgba(80, 130, 210, 0.22) !important;
+    border-radius: 50%;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    box-shadow: none !important;
+}
+
+.hamburger-btn:hover {
+    background: rgba(80, 130, 210, 0.2) !important;
+    border-color: rgba(80, 130, 210, 0.32) !important;
+}
+
+.hamburger-btn:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3) !important;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform 0.22s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.15s ease;
+}
+
+.hamburger-btn:not(.collapsed) .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn:not(.collapsed) .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger-btn:not(.collapsed) .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu — blends into the pill, grows it from within */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse .navbar-nav {
+        gap: 0.15rem !important;
+    }
+
+    .navbar-collapse .nav-item {
+        opacity: 0;
+        transform: translateX(-8px);
+        transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .navbar-collapse.show .nav-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(1) { transition-delay: 0.08s; }
+    .navbar-collapse.show .nav-item:nth-child(2) { transition-delay: 0.12s; }
+    .navbar-collapse.show .nav-item:nth-child(3) { transition-delay: 0.16s; }
+    .navbar-collapse.show .nav-item:nth-child(4) { transition-delay: 0.20s; }
+
+    .navbar-collapse .nav-link {
+        padding: 0.8rem 1.1rem !important;
+        border-radius: 14px;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.95) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid transparent;
+        transition: var(--transition-liquid);
+    }
+
+    .navbar-collapse .nav-link::after {
+        content: "→";
+        opacity: 0;
+        transform: translateX(-6px);
+        transition: var(--transition-liquid);
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .navbar-collapse .nav-link:hover,
+    .navbar-collapse .nav-link:focus {
+        background: rgba(80, 130, 210, 0.14);
+        border-color: rgba(80, 130, 210, 0.22);
+        color: #fff !important;
+    }
+
+    .navbar-collapse .nav-link:hover::after {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Liquid Pills & Buttons */

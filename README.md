@@ -38,12 +38,11 @@ I'm a 3rd year Computer Science / Ingeniería Informática student at the Public
 
 ---
 
-### Research progress
+### Current research
 
 | Project | Focus | Institution |
 | :--- | :--- | :--- |
-| **Federated Learning** | Decentralized AI model training | UPNA |
-| **Hypercycle** | TODA/IP protocol, descentralized IoAI | UPNA |
+| **Federated Learning & Hypercycle** | Decentralized AI model training, TODA/IP protocol, decentralized IoAI | UPNA |
 
 ---
 

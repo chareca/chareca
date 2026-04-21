@@ -38,12 +38,12 @@ I'm a 3rd year Computer Science / Ingeniería Informática student at the Public
 
 ---
 
-### Current research
+### Current research & projects
 
-| Project | Focus | Institution |
-| :--- | :--- | :--- |
-| **Federated Learning & Hypercycle** | Decentralized AI model training, TODA/IP protocol, decentralized IoAI | UPNA |
-
+| Project | Focus | Institution | Repo (if public) |
+| :--- | :--- | :--- | :--- |
+| **Federated Learning & Hypercycle** | Decentralized AI model training, TODA/IP protocol, decentralized IoAI | UPNA | -<!--[HyperCycle](https://github.com/chareca/hypercycle)-->
+| **RUFÜS** | AI Voice & Chat Assistants for Businesses | Personal | [RUFÜS](https://github.com/chareca/RUFUS)
 ---
 
 ### Let's Connect

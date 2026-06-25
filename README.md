@@ -2,7 +2,7 @@
 
 Hello, I'm Nicolás
 
-I'm a 3rd year Computer Science / Ingeniería Informática student at the Public University of Navarre (UPNA).
+I'm a 4th year Computer Science / Ingeniería Informática student at the Public University of Navarre (UPNA).
 
 ---
 

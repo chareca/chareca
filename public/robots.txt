@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/Nicolas%20Chareca.pdf
+
+Sitemap: https://nicolaschareca.com/sitemap.xml

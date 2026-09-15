@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets/
-Disallow: /images/
-Disallow: /assets/images/
-
-Sitemap: https://nicochare.github.io/chareca/sitemap.xml

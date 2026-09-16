@@ -49,12 +49,12 @@ export default function ResumePage() {
 
   return (
     <div className="portfolio min-h-svh bg-background font-mono text-foreground">
-      <a className="skip-link" href="#about">
+      <a className="skip-link" href="#cv">
         Skip to content
       </a>
 
-      <div className="resume-panel relative z-10 flex min-w-0 flex-col px-6 py-6 sm:px-10 sm:py-8 xl:px-12">
-        <header className="mb-12 flex items-center justify-between gap-4">
+      <header id="about" className="resume-header">
+        <div className="resume-toolbar flex items-center justify-between gap-4">
           <a href="#about" className="text-sm tracking-tight" aria-label="Nicolás Chareca, home">
             nicolás
           </a>
@@ -86,133 +86,22 @@ export default function ResumePage() {
               )}
             </svg>
           </button>
-        </header>
+        </div>
 
-        <main id="about" tabIndex={-1} className="space-y-10 outline-none">
-          <div>
-            <h1 className="text-[clamp(1.5rem,2.4vw,2.25rem)] leading-tight font-normal tracking-[-0.035em]">
-              NICOLÁS CHARECA
-            </h1>
-            <p className="mt-2 text-sm tracking-wide sm:text-base">COMPUTER SCIENCE STUDENT AND SOFTWARE DEVELOPER</p>
-            <p className="mt-6 max-w-[43ch] text-sm leading-7 text-muted-foreground">
-              Building RONUS and websites for clients.
-              <br />
-              4th-year Computer Science student at UPNA.
-            </p>
-          </div>
+        <div className="resume-intro">
+          <h1 id="resume-name" className="text-[clamp(1.5rem,2.4vw,2.25rem)] leading-tight font-normal tracking-[-0.035em]">
+            NICOLÁS CHARECA
+          </h1>
+          <p className="mt-2 text-sm tracking-wide sm:text-base">COMPUTER SCIENCE STUDENT AND SOFTWARE DEVELOPER</p>
+          <p className="mt-6 max-w-[43ch] text-sm leading-7 text-muted-foreground">
+            Building RONUS and websites for clients.
+            <br />
+            4th-year Computer Science student at UPNA.
+          </p>
+        </div>
+      </header>
 
-          <section aria-labelledby="experience-title" id="experience">
-            <h2 id="experience-title" className="section-heading">Experience</h2>
-            <div className="space-y-6">
-              <div className="resume-row">
-                <a className="text-link w-fit" href="https://ronus.tech" target="_blank" rel="noopener noreferrer">
-                  RONUS <ArrowUpRight />
-                  <span className="sr-only"> (opens in a new tab)</span>
-                </a>
-                <div className="min-w-0">
-                  <h3>Chief Technology Officer</h3>
-                  <p className="row-description">Automate customer service and bookings.</p>
-                </div>
-                <p className="resume-date text-primary">
-                  Apr 2026 –<br className="hidden sm:block" /> Present
-                </p>
-              </div>
-              <div className="resume-row">
-                <p>UPNA</p>
-                <div className="min-w-0">
-                  <h3>Collaboration scholarship</h3>
-                  <p className="row-description">Federated Learning &amp; Hypercycle.</p>
-                  <p className="mt-1 text-xs text-muted-foreground">Completed · Oct 2025 – Jun 2026</p>
-                </div>
-                <p className="resume-date">2025–26</p>
-              </div>
-              <div className="resume-row">
-                <p>Nubax</p>
-                <div className="min-w-0">
-                  <h3>Junior Tech &amp; Innovation Technician</h3>
-                  <p className="row-description">API integrations &amp; web platforms.</p>
-                </div>
-                <p className="resume-date">2021–23</p>
-              </div>
-            </div>
-          </section>
-
-          <section aria-labelledby="projects-title" id="projects">
-            <h2 id="projects-title" className="section-heading">Client work</h2>
-            <a
-              className="project-link group flex items-start justify-between gap-4 border-b border-border pb-4"
-              href="https://sandralopez.co"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>
-                <h3 className="text-link">Sandra López</h3>
-                <p className="row-description">Website design &amp; development</p>
-              </div>
-              <span className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground group-hover:text-primary">
-                <span className="hidden min-[400px]:inline">sandralopez.co</span>
-                <ArrowUpRight />
-              </span>
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </section>
-
-          <section aria-labelledby="education-title">
-            <h2 id="education-title" className="section-heading">Education</h2>
-            <div className="resume-row">
-              <p>UPNA</p>
-              <div>
-                <h3>Computer Science</h3>
-                <p className="row-description">4th year · Public University of Navarre</p>
-              </div>
-              <p className="resume-date">2023–27</p>
-            </div>
-            <details className="background-details mt-5">
-              <summary className="w-fit cursor-pointer py-2 text-xs text-muted-foreground hover:text-foreground">
-                More about my background
-              </summary>
-              <div className="mt-4 space-y-5 border-l border-border pl-4 text-xs leading-6 text-muted-foreground">
-                <p>
-                  <span className="text-foreground">UPNA honours</span>
-                  <br />
-                  Advanced Programming, Network Architecture, and Software Design &amp; Analysis.
-                </p>
-                <p>
-                  <span className="text-foreground">ORT Argentina · 2015–2020</span>
-                  <br />
-                  Web &amp; mobile app development. Full-stack development, mobile architecture, and databases.
-                </p>
-                <p>
-                  <span className="text-foreground">Tools &amp; technologies</span>
-                  <br />
-                  Python, JavaScript, Java, Django, Linux, Docker, and Git.
-                </p>
-                <p>
-                  <span className="text-foreground">Languages &amp; certifications</span>
-                  <br />
-                  Spanish (native) · English (C1, Cambridge CAE)
-                  <br />
-                  Linux, Python, Data Analytics, and Ansible courses.
-                </p>
-              </div>
-            </details>
-          </section>
-        </main>
-
-        <footer id="contact" className="mt-auto pt-12">
-          <nav aria-label="Contact links" className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
-            <span className="text-muted-foreground">Links</span>
-            <a className="text-link" href="mailto:nicolaschareca@gmail.com">Email <ArrowUpRight /></a>
-            <QuickTooltipActions />
-            <a className="text-link" href="https://www.linkedin.com/in/nicolaschareca" target="_blank" rel="noopener noreferrer">
-              LinkedIn <ArrowUpRight /><span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </nav>
-          <p className="mt-6 text-[11px] text-muted-foreground">© {new Date().getFullYear()} Nicolás Chareca</p>
-        </footer>
-      </div>
-
-      <aside className="shader-panel relative overflow-hidden" aria-label="Animated artwork">
+      <aside className="shader-panel overflow-hidden" aria-label="Animated artwork">
         <div aria-hidden="true" className="shader-fallback absolute inset-0">
           {supportsWebGL && (
             <Dithering
@@ -224,6 +113,9 @@ export default function ResumePage() {
               size={3}
               offsetX={0}
               offsetY={0}
+              fit="cover"
+              worldWidth={1080}
+              worldHeight={1080}
               scale={0.8}
               rotation={0}
               speed={isAnimationStopped ? 0 : 0.1}
@@ -248,6 +140,117 @@ export default function ResumePage() {
           )}
         </div>
       </aside>
+
+      <main id="cv" aria-labelledby="resume-name" tabIndex={-1} className="resume-content space-y-10 outline-none">
+        <section aria-labelledby="experience-title" id="experience">
+          <h2 id="experience-title" className="section-heading">Experience</h2>
+          <div className="space-y-6">
+            <div className="resume-row">
+              <a className="text-link w-fit" href="https://ronus.tech" target="_blank" rel="noopener noreferrer">
+                RONUS <ArrowUpRight />
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              <div className="min-w-0">
+                <h3>Chief Technology Officer</h3>
+                <p className="row-description">Automate customer service and bookings.</p>
+              </div>
+              <p className="resume-date text-primary">
+                Apr 2026 – Present
+              </p>
+            </div>
+            <div className="resume-row">
+              <p>UPNA</p>
+              <div className="min-w-0">
+                <h3>Collaboration scholarship</h3>
+                <p className="row-description">Federated Learning &amp; Hypercycle.</p>
+                <p className="mt-1 text-xs text-muted-foreground">Completed · Oct 2025 – Jun 2026</p>
+              </div>
+              <p className="resume-date">2025–26</p>
+            </div>
+            <div className="resume-row">
+              <p>Nubax</p>
+              <div className="min-w-0">
+                <h3>Junior Tech &amp; Innovation Technician</h3>
+                <p className="row-description">API integrations &amp; web platforms.</p>
+              </div>
+              <p className="resume-date">2021–23</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="projects-title" id="projects">
+          <h2 id="projects-title" className="section-heading">Client work</h2>
+          <a
+            className="project-link group flex items-start justify-between gap-4 border-b border-border pb-4"
+            href="https://sandralopez.co"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <h3 className="text-link">Sandra López</h3>
+              <p className="row-description">Website design &amp; development</p>
+            </div>
+            <span className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground group-hover:text-primary">
+              <span className="hidden min-[400px]:inline">sandralopez.co</span>
+              <ArrowUpRight />
+            </span>
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </section>
+
+        <section aria-labelledby="education-title">
+          <h2 id="education-title" className="section-heading">Education</h2>
+          <div className="resume-row">
+            <p>UPNA</p>
+            <div>
+              <h3>Computer Science</h3>
+              <p className="row-description">4th year · Public University of Navarre</p>
+            </div>
+            <p className="resume-date">2023–27</p>
+          </div>
+          <details className="background-details mt-5">
+            <summary className="w-fit cursor-pointer py-2 text-xs text-muted-foreground hover:text-foreground">
+              More about my background
+            </summary>
+            <div className="mt-4 space-y-5 border-l border-border pl-4 text-xs leading-6 text-muted-foreground">
+              <p>
+                <span className="text-foreground">UPNA honours</span>
+                <br />
+                Advanced Programming, Network Architecture, and Software Design &amp; Analysis.
+              </p>
+              <p>
+                <span className="text-foreground">ORT Argentina · 2015–2020</span>
+                <br />
+                Web &amp; mobile app development. Full-stack development, mobile architecture, and databases.
+              </p>
+              <p>
+                <span className="text-foreground">Tools &amp; technologies</span>
+                <br />
+                Python, JavaScript, Java, Django, Linux, Docker, and Git.
+              </p>
+              <p>
+                <span className="text-foreground">Languages &amp; certifications</span>
+                <br />
+                Spanish (native) · English (C1, Cambridge CAE)
+                <br />
+                Linux, Python, Data Analytics, and Ansible courses.
+              </p>
+            </div>
+          </details>
+        </section>
+      </main>
+
+      <footer id="contact" className="resume-footer">
+        <nav aria-label="Contact links" className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+          <span className="text-muted-foreground">Links</span>
+          <a className="text-link" href="mailto:nicolaschareca@gmail.com">Email <ArrowUpRight /></a>
+          <QuickTooltipActions />
+          <a className="text-link" href="https://www.linkedin.com/in/nicolaschareca" target="_blank" rel="noopener noreferrer">
+            LinkedIn <ArrowUpRight /><span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </nav>
+        <p className="mt-6 text-[11px] text-muted-foreground">© {new Date().getFullYear()} Nicolás Chareca</p>
+      </footer>
     </div>
   )
 }

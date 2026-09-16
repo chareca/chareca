@@ -43,6 +43,8 @@ The shader uses `@paper-design/shaders-react`. The current API uses `size`; `pxS
 
 The animation uses ice blue: `#7DCFFF` in dark mode and `#287EAE` in light mode. Text and focus use darker blue in light mode for contrast.
 
+On phones and tablets, the artwork sits between the introduction and the CV in a compact band. The split layout starts at 1100 CSS pixels. On wider screens, the text column stays at or below 48rem and the artwork follows the viewport height. A fixed shader coordinate space keeps the pattern scale consistent during resizing. CV rows adapt to their content width through a container query.
+
 The GitHub menu opens on mouse hover, click, or keyboard activation. It uses a Radix Popover for the two links and tooltips for their labels. Native anchors replace the supplied Next.js links because this site uses Vite.
 
 The old PDF remains in `public/assets/` to preserve its existing URL. The page does not link to that outdated CV.

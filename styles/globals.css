@@ -84,21 +84,53 @@
 
 @layer components {
   .portfolio {
+    --resume-gutter: clamp(1.25rem, 5vw, 3rem);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "artwork" "content" "footer";
     align-items: start;
-  }
-
-  .resume-panel {
-    min-height: 100svh;
+    align-content: start;
     font-size: 0.875rem;
     line-height: 1.6;
   }
 
+  .resume-header,
+  .resume-content,
+  .resume-footer {
+    min-width: 0;
+    width: 100%;
+    max-width: 48rem;
+    justify-self: center;
+    padding-inline: max(var(--resume-gutter), env(safe-area-inset-left)) max(var(--resume-gutter), env(safe-area-inset-right));
+  }
+
+  .resume-header {
+    grid-area: intro;
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+    padding-bottom: 1.75rem;
+  }
+
+  .resume-toolbar {
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .resume-content {
+    grid-area: content;
+    container: resume / inline-size;
+    padding-top: 2rem;
+  }
+
+  .resume-footer {
+    grid-area: footer;
+    padding-top: 3rem;
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
   .shader-panel {
-    position: sticky;
-    top: 0;
-    height: 100svh;
+    grid-area: artwork;
+    position: relative;
+    min-width: 0;
+    height: clamp(9rem, 32vw, 14rem);
     background: var(--background);
   }
 
@@ -189,7 +221,7 @@
   }
 }
 
-@media (max-width: 1100px) and (min-width: 768px) {
+@container resume (max-width: 28rem) {
   .resume-row {
     grid-template-columns: 4.25rem minmax(0, 1fr);
     column-gap: 0.75rem;
@@ -200,29 +232,37 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1100px) {
   .portfolio {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, min(50%, 48rem)) minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "intro artwork" "content artwork" "footer artwork";
   }
 
-  .resume-panel {
-    min-height: auto;
+  .resume-header {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .resume-content {
+    padding-top: 0;
+  }
+
+  .resume-footer {
+    padding-bottom: 2rem;
   }
 
   .shader-panel {
-    position: relative;
-    height: min(85vw, 28rem);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100dvh;
   }
 }
 
-@media (max-width: 420px) {
-  .resume-row {
-    grid-template-columns: 4.25rem minmax(0, 1fr);
-    column-gap: 0.75rem;
-  }
-
-  .resume-date {
-    grid-column: 2;
+@media (max-width: 1099px) and (max-height: 500px) {
+  .shader-panel {
+    height: 8rem;
   }
 }
 

@@ -1,12 +1,12 @@
 # Nicolás Chareca
 
-CTO at [RONUS](https://ronus.tech) since April 2026. Website developer and fourth-year Computer Science student at the Public University of Navarre (UPNA).
+Fourth-year Computer Science student at the Public University of Navarre (UPNA), website developer and CTO at [RONUS](https://ronus.tech) since April 2026.
 
 ## Current work
 
-- **RONUS:** Chief Technology Officer. Automate customer service and bookings.
-- **Client websites:** Design and development for [Sandra López](https://sandralopez.co).
 - **Education:** Computer Science at UPNA, 2023–2027. Currently in the fourth year.
+- **Client websites:** Design and development for [Sandra López](https://sandralopez.co/en).
+- **RONUS:** Chief Technology Officer. Automate customer service and bookings.
 
 ## Previous experience
 

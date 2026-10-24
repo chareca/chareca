@@ -159,6 +159,24 @@ export default function ResumePage() {
               </p>
             </div>
             <div className="resume-row">
+              <a
+                className="text-link inline!"
+                href="https://github.com/chareca/aulario-plus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Aulario Plus <ArrowUpRight />
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              <div className="min-w-0">
+                <h3>Lead Developer</h3>
+                <p className="row-description">
+                  Personal project · Browser extension that improves UPNA&apos;s virtual campus. Chrome &amp; Firefox.
+                </p>
+              </div>
+              <p className="resume-date">2026</p>
+            </div>
+            <div className="resume-row">
               <p>UPNA</p>
               <div className="min-w-0">
                 <h3>Collaboration scholarship</h3>

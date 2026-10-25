@@ -3,6 +3,7 @@
 import { Dithering } from "@paper-design/shaders-react"
 import { useEffect, useState } from "react"
 import { QuickTooltipActions } from "@/components/ui/quick-tooltip-actions"
+import { HoverPreview } from "@/components/ui/hover-preview"
 
 function ArrowUpRight() {
   return (
@@ -144,76 +145,128 @@ export default function ResumePage() {
       <main id="cv" aria-labelledby="resume-name" tabIndex={-1} className="resume-content space-y-10 outline-none">
         <section aria-labelledby="experience-title" id="experience">
           <h2 id="experience-title" className="section-heading">Experience</h2>
-          <div className="space-y-6">
-            <div className="resume-row">
-              <a className="text-link w-fit" href="https://ronus.tech" target="_blank" rel="noopener noreferrer">
-                RONUS <ArrowUpRight />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-              <div className="min-w-0">
-                <h3>Chief Technology Officer</h3>
-                <p className="row-description">Automate customer service and bookings.</p>
-              </div>
-              <p className="resume-date text-primary">
-                Apr 2026 – Present
-              </p>
-            </div>
-            <div className="resume-row">
-              <a
-                className="text-link inline!"
-                href="https://github.com/chareca/aulario-plus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aulario Plus <ArrowUpRight />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-              <div className="min-w-0">
-                <h3>Lead Developer</h3>
-                <p className="row-description">
-                  Personal project · Browser extension that improves UPNA&apos;s virtual campus. Chrome &amp; Firefox.
+          <HoverPreview>
+            <div className="space-y-6">
+              <div className="resume-row">
+                <a className="text-link w-fit" data-preview="/projects/ronus.jpg" href="https://ronus.tech" target="_blank" rel="noopener noreferrer">
+                  RONUS <ArrowUpRight />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <div className="min-w-0">
+                  <h3>Chief Technology Officer</h3>
+                  <p className="row-description">Automate customer service and bookings.</p>
+                </div>
+                <p className="resume-date text-primary">
+                  Apr 2026 – Present
                 </p>
               </div>
-              <p className="resume-date">2026</p>
-            </div>
-            <div className="resume-row">
-              <p>UPNA</p>
-              <div className="min-w-0">
-                <h3>Collaboration scholarship</h3>
-                <p className="row-description">Federated Learning &amp; Hypercycle.</p>
-                <p className="mt-1 text-xs text-muted-foreground">Completed · Oct 2025 – Jun 2026</p>
+              <div className="resume-row">
+                <a
+                  className="text-link inline!"
+                  data-preview="/projects/aulario-plus.jpg"
+                  href="https://github.com/chareca/aulario-plus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Aulario Plus <ArrowUpRight />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <div className="min-w-0">
+                  <h3>Lead Developer</h3>
+                  <p className="row-description">
+                    Personal project · Browser extension that improves UPNA&apos;s virtual campus. Chrome &amp; Firefox.
+                  </p>
+                </div>
+                <p className="resume-date">2026</p>
               </div>
-              <p className="resume-date">2025–26</p>
-            </div>
-            <div className="resume-row">
-              <p>Nubax</p>
-              <div className="min-w-0">
-                <h3>Junior Tech &amp; Innovation Technician</h3>
-                <p className="row-description">API integrations &amp; web platforms.</p>
+              <div className="resume-row">
+                <p>UPNA</p>
+                <div className="min-w-0">
+                  <h3>Collaboration scholarship</h3>
+                  <p className="row-description">Federated Learning &amp; Hypercycle.</p>
+                  <p className="mt-1 text-xs text-muted-foreground">Completed · Oct 2025 – Jun 2026</p>
+                </div>
+                <p className="resume-date">2025–26</p>
               </div>
-              <p className="resume-date">2021–23</p>
+              <div className="resume-row">
+                <p>Nubax</p>
+                <div className="min-w-0">
+                  <h3>Junior Tech &amp; Innovation Technician</h3>
+                  <p className="row-description">API integrations &amp; web platforms.</p>
+                </div>
+                <p className="resume-date">2021–23</p>
+              </div>
             </div>
-          </div>
+          </HoverPreview>
         </section>
 
         <section aria-labelledby="projects-title" id="projects">
           <h2 id="projects-title" className="section-heading">Client work</h2>
-          <a
-            className="project-link group flex items-start justify-between gap-4 border-b border-border pb-4"
-            href="https://sandralopez.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>
-              <h3 className="text-link">Sandra López</h3>
-              <p className="row-description">Website design &amp; development</p>
+          <HoverPreview>
+            <div className="space-y-4">
+              {/* Two separate links, so the empty space between them is not a link. */}
+              <div className="flex items-start justify-between gap-4 border-b border-border pb-4">
+                <div>
+                  <h3>
+                    <a
+                      className="text-link"
+                      href="https://essenceskinlife.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-preview="/projects/essence-skin-life.jpg"
+                    >
+                      Essence Skin Life
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </h3>
+                  <p className="row-description">Website design &amp; development</p>
+                </div>
+                {/* Screen readers and the keyboard skip this copy of the link above. */}
+                <a
+                  className="text-link gap-2! pt-0.5 text-xs text-muted-foreground hover:text-primary"
+                  href="https://essenceskinlife.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  data-preview="/projects/essence-skin-life.jpg"
+                >
+                  <span className="hidden min-[400px]:inline">essenceskinlife.com</span>
+                  <ArrowUpRight />
+                </a>
+              </div>
+              <div className="flex items-start justify-between gap-4 border-b border-border pb-4">
+                <div>
+                  <h3>
+                    <a
+                      className="text-link"
+                      href="https://sandralopez.co"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-preview="/projects/sandra-lopez.jpg"
+                    >
+                      Sandra López
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </h3>
+                  <p className="row-description">Website design &amp; development</p>
+                </div>
+                {/* Screen readers and the keyboard skip this copy of the link above. */}
+                <a
+                  className="text-link gap-2! pt-0.5 text-xs text-muted-foreground hover:text-primary"
+                  href="https://sandralopez.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  data-preview="/projects/sandra-lopez.jpg"
+                >
+                  <span className="hidden min-[400px]:inline">sandralopez.co</span>
+                  <ArrowUpRight />
+                </a>
+              </div>
             </div>
-            <span className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground group-hover:text-primary">
-              <span className="hidden min-[400px]:inline">sandralopez.co</span>
-              <ArrowUpRight />
-            </span>
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
+          </HoverPreview>
         </section>
 
         <section aria-labelledby="education-title">
